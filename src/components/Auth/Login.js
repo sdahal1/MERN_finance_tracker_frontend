@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Login = props => {
 
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("rob@nba.com");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -39,7 +39,7 @@ const Login = props => {
           type="text" 
           name="email" 
           onChange={ e => setEmail(e.target.value) } 
-          value={ "rob@nba.com" }
+          value={ email }
           id="email"
         />
       </div>
