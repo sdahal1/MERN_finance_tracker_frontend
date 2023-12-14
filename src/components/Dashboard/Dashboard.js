@@ -13,13 +13,14 @@ const Dashboard = () => {
 
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/getloggedinuser`, { withCredentials: true, credentials: 'include' })
+    axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/getloggedinuser`, { withCredentials: true })
       .then(res => {
         console.log("res from checking getLoggedinuser", res)
         setUser(res.data.results)
       })
       .catch(err => {
-        console.log("err in getting loggedinuser", err)
+        console.log("err in getting loggedinuser", err);
+        console.log("wha")
         setUser({firstName: "testing"})
         // navigate("/")
       })
