@@ -13,7 +13,7 @@ const Dashboard = () => {
 
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/getloggedinuser`, { withCredentials: true })
+    axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/getloggedinuser`, { withCredentials: true, headers: {Authorization: 'Bearer <Access Token>'} })
       .then(res => {
         console.log("res from checking getLoggedinuser", res)
         setUser(res.data.results)
