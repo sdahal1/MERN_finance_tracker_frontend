@@ -15,6 +15,7 @@ const Dashboard = () => {
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/getloggedinuser`, { withCredentials: true })
       .then(res => {
+        console.log(`sent request to get logged in user to this url ${process.env.REACT_APP_API_BASE_URL}/api/getloggedinuser`)
         console.log("res from checking getLoggedinuser", res)
         setUser(res.data.results)
       })
