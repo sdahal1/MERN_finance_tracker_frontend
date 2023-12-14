@@ -21,8 +21,8 @@ const Dashboard = () => {
       .catch(err => {
         console.log("err in getting loggedinuser", err);
         console.log("wha")
-        setUser({firstName: "testing"})
-        // navigate("/")
+        // setUser({firstName: "testing"})
+        navigate("/")
       })
   }, [])
 
@@ -36,9 +36,9 @@ const Dashboard = () => {
       <Link to="expenses/new" className='btn btn-success me-3'>Add a new expense</Link>
       <Link to ="expenses/chart" className='btn btn-warning'>View Chart</Link>
       <Routes>
-        {/* <Route path = "/expenses/*" element = {<UserExpenses/>}/>
+        <Route path = "/expenses/*" element = {<UserExpenses/>}/>
         <Route exact path = "/expenses/new" element = {<ExpenseForm/>}/>
-        <Route path = "/expenses/edit/:expense_id" element = {<ExpenseForm/>}/> */}
+        <Route path = "/expenses/edit/:expense_id" element = {<ExpenseForm/>}/>
       </Routes>
     </div>)
   );
