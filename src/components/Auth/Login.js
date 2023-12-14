@@ -39,7 +39,7 @@ const Login = props => {
           type="text" 
           name="email" 
           onChange={ e => setEmail(e.target.value) } 
-          value={ email }
+          value={ "rob@nba.com" }
           id="email"
         />
       </div>
