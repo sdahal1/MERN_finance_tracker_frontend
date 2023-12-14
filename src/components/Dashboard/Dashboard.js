@@ -19,7 +19,7 @@ const Dashboard = () => {
         setUser(res.data.results)
       })
       .catch(err => {
-        // console.log("err", err)
+        console.log("err in getting loggedinuser", err)
         navigate("/")
       })
   }, [])
